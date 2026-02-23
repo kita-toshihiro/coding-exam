@@ -91,5 +91,5 @@ python main.py
 | `database.py` | **DB管理**: SQLite（`exam_data.db`）への読み書きを担当 |
 | `utils.py` | **多言語・UI管理**: 言語リソース定義とコピペ防止CSSの注入 |
 | `quizdata/xlsx2quizdata.py` | **生成AIでの問題データの生成**: Gemini を使用してコードを解析し問題を作成 |
-| quizdata/extract_code_and_save.ipynb | Moodleの課題提出ファイルからプログラムのコードを抽出してデータファイルを作る | 
+| `quizdata/extract_code_and_save.ipynb` | Moodleの課題提出ファイルからプログラムのコードを抽出してデータファイルを作る | 
 
