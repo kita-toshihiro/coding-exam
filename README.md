@@ -59,6 +59,7 @@ cd quizdata; python xlsx2quizdata.py
 | `filename` | （任意）提出時のファイル名。管理用に使用されます。 |
 | `submitfile` | （任意）提出元ファイルのパスや詳細情報。 |
 
+なお、quizdata/extract_code_and_save.ipynb を用いると、Moodleの課題に提出された各学習者の提出ファイルからプログラムのコードを抽出して、extracted_code_with_userid.xlsx に必要な構造を持つファイルを作成することができます。
 
 ### 3. サーバーの起動
 
@@ -90,4 +91,5 @@ python main.py
 | `database.py` | **DB管理**: SQLite（`exam_data.db`）への読み書きを担当 |
 | `utils.py` | **多言語・UI管理**: 言語リソース定義とコピペ防止CSSの注入 |
 | `quizdata/xlsx2quizdata.py` | **生成AIでの問題データの生成**: Gemini を使用してコードを解析し問題を作成 |
+| quizdata/extract_code_and_save.ipynb | Moodleの課題提出ファイルからプログラムのコードを抽出してデータファイルを作る | 
 
