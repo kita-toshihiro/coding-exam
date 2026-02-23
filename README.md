@@ -49,7 +49,7 @@ cd quizdata; python3 xlsx2quizdata.py
 
 ```
 
-#### データファイル構造 (`extracted_code_with_userid.xlsx`)
+#### `extracted_code_with_userid.xlsx`の構造
 
 クイズ生成の元となる Excel ファイルは、以下の列名を持つ必要があります。このデータを用いて、`xlsx2quizdata.py` が各学生専用のクイズを自動生成します。
 
