@@ -1,6 +1,6 @@
 # Programming Quiz System (LTI Integration)
 
-このプロジェクトは、LMS（Moodle等）から提出されたソースコードをAIで解析し、理解度チェック用のクイズを自動生成する学習支援ツールです。
+このプロジェクトは、LMS（Moodle等）から提出されたソースコードをAIで解析し、学生ごとにパーソナライズされた理解度チェック用のクイズを自動生成する学習支援ツールです。
 
 ## LMSとの連携のための設定 (`main.py`)
 
@@ -89,5 +89,5 @@ python main.py
 | `components/admin.py` | **管理者画面**: 全ユーザーの回答状況とソースコードのハイライト表示。 |
 | `database.py` | **DB管理**: SQLite（`exam_data.db`）への読み書きを担当。 |
 | `utils.py` | **多言語・UI管理**: 言語リソース定義とコピペ防止CSSの注入。 |
-| `quizdata/xlsx2quizdata.py` | **AIクイズ生成**: Gemini 3 Flash を使用して Excel のコードを解析。 |
+| `quizdata/xlsx2quizdata.py` | **生成AIでの問題データの生成**: Gemini を使用してコードを解析し問題を作成。 |
 
