@@ -40,16 +40,16 @@ pip install streamlit fastapi uvicorn requests pandas google-genai openpyxl
 
 ### 2. クイズデータの生成
 
-あらかじめ `extracted_code_with_userid.xlsx` を用意し、AIによる問題生成を実行します。
+あらかじめ `extracted_code_with_userid.xlsx` を用意してください。以下のコマンドによってAIによる問題生成を実行できます。
 
 ```bash
-python xlsx2quizdata.py
+cd quizdata; python xlsx2quizdata.py
 
 ```
 
 #### データファイル構造 (`extracted_code_with_userid.xlsx`)
 
-クイズ生成のソースとなる Excel ファイルは、以下の列名を持つ必要があります。このデータに基づき、`xlsx2quizdata.py` が各学生専用のクイズを自動生成します。
+クイズ生成の元となる Excel ファイルは、以下の列名を持つ必要があります。このデータを用いて、`xlsx2quizdata.py` が各学生専用のクイズを自動生成します。
 
 | 列名 | 説明 |
 | --- | --- |
@@ -63,7 +63,7 @@ python xlsx2quizdata.py
 ### 3. サーバーの起動
 
 `main.py` を実行すると、FastAPI（ポート8803）とStreamlit（ポート8802）が同時に起動します。
-（8802 と 8803 のポートが外部からアクセスできるようにする必要があります。）
+（8802 と 8803 のポートが、外部からアクセスできるようにしておく必要があります。）
 
 ```bash
 python main.py
