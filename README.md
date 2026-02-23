@@ -81,13 +81,13 @@ python main.py
 
 | ファイル名 | 役割 |
 | --- | --- |
-| `main.py` | **LTI認証サーバー**: LTIリクエストを検証し、ワンタイムトークンを発行。 |
-| `app.py` | **メインアプリ**: 認証チェック後、ユーザーのロールに応じたパネルを表示。 |
-| `auth.py` | **認証ブリッジ**: FastAPIとStreamlit間のトークン検証を仲介。 |
-| `components/quiz.py` | **学生用画面**: クイズの回答、採点、練習モード時の結果表示。 |
-| `components/instructor.py` | **教員用パネル**: 試験ID設定、練習モード切替、成績CSV出力。 |
-| `components/admin.py` | **管理者画面**: 全ユーザーの回答状況とソースコードのハイライト表示。 |
-| `database.py` | **DB管理**: SQLite（`exam_data.db`）への読み書きを担当。 |
-| `utils.py` | **多言語・UI管理**: 言語リソース定義とコピペ防止CSSの注入。 |
-| `quizdata/xlsx2quizdata.py` | **生成AIでの問題データの生成**: Gemini を使用してコードを解析し問題を作成。 |
+| `main.py` | **LTI認証サーバー**: LTIリクエストを検証し、ワンタイムトークンを発行 |
+| `app.py` | **メインアプリ**: 認証チェック後、ユーザーのロールに応じたパネルを表示 |
+| `auth.py` | **認証ブリッジ**: FastAPIとStreamlit間のトークン検証を仲介 |
+| `components/quiz.py` | **学生用画面**: クイズの回答、採点、練習モード時の結果表示 |
+| `components/instructor.py` | **教員用パネル**: 試験ID設定、練習モード切替、成績CSV出力 |
+| `components/admin.py` | **管理者画面**: 全ユーザーの回答状況とソースコードのハイライト表示 |
+| `database.py` | **DB管理**: SQLite（`exam_data.db`）への読み書きを担当 |
+| `utils.py` | **多言語・UI管理**: 言語リソース定義とコピペ防止CSSの注入 |
+| `quizdata/xlsx2quizdata.py` | **生成AIでの問題データの生成**: Gemini を使用してコードを解析し問題を作成 |
 
