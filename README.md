@@ -2,7 +2,7 @@
 
 このプロジェクトは、LMS（Moodle等）から提出されたソースコードをAIで解析し、理解度チェック用のクイズを自動生成する学習支援ツールです。
 
-## セキュリティ設定 (`main.py`)
+## LMSとの連携のための設定 (`main.py`)
 
 LMSとの連携を安全に行うため、`main.py` 内の以下の変数を適切に設定してください。
 
@@ -66,6 +66,19 @@ pip install streamlit fastapi uvicorn requests pandas google-genai openpyxl
 python xlsx2quizdata.py
 
 ```
+
+#### データファイル構造 (`extracted_code_with_userid.xlsx`)
+
+クイズ生成のソースとなる Excel ファイルは、以下の列名を持つ必要があります。このデータに基づき、`xlsx2quizdata.py` が各学生専用のクイズを自動生成します。
+
+| 列名 | 説明 |
+| --- | --- |
+| `username` | 学生の識別子（学籍番号など）。LTIから渡されるユーザー名と一致させる必要があります。 |
+| `examid` | 課題の識別番号（例: `1`, `2`）。教員パネルで指定する ID と連動します。 |
+| `extractedcode` | 解析対象となるソースコード本体。 |
+| `filename` | （任意）提出時のファイル名。管理用に使用されます。 |
+| `submitfile` | （任意）提出元ファイルのパスや詳細情報。 |
+
 
 ### 3. サーバーの起動
 
