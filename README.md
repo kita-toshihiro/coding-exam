@@ -2,6 +2,8 @@
 
 このプロジェクトは、LMS（Moodle等）から提出されたソースコードをAIで解析し、学生ごとにパーソナライズされた理解度チェック用のクイズを自動生成する学習支援ツールです。
 
+動作検証は Ubuntu 22.04, Moodle 4.5 で行っています。
+
 ## LMSとの連携のための設定
 
 LMSとの連携を安全に行うため、`main.py` 内の以下の変数を適切に設定してください。
@@ -34,7 +36,7 @@ LMSから送信される LTI リクエスト内の `launch_presentation_locale` 
 ### 1. 依存ライブラリのインストール
 
 ```bash
-pip install streamlit fastapi uvicorn requests pandas google-genai openpyxl
+pip3 install streamlit fastapi uvicorn requests pandas google-genai openpyxl
 
 ```
 
@@ -43,7 +45,7 @@ pip install streamlit fastapi uvicorn requests pandas google-genai openpyxl
 あらかじめ `extracted_code_with_userid.xlsx` を用意してください。以下のコマンドによってAIによる問題生成を実行できます。
 
 ```bash
-cd quizdata; python xlsx2quizdata.py
+cd quizdata; python3 xlsx2quizdata.py
 
 ```
 
@@ -67,7 +69,7 @@ cd quizdata; python xlsx2quizdata.py
 （8802 と 8803 のポートが、外部からアクセスできるようにしておく必要があります。）
 
 ```bash
-python main.py
+python3 main.py
 
 ```
 
