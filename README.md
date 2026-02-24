@@ -94,7 +94,7 @@ cd quizdata; python3 xlsx2quizdata.py
 | `extractedcode` | 出題対象となるソースコード（学習者が自分で提出したもの） |
 | `filename` | （任意）提出時のファイル名。管理用に使用されます |
 
-なお、quizdata/extract_code_and_save.ipynb を用いると、Moodleの課題に提出された各学習者の提出ファイルからプログラムのコードを抽出して、extracted_code_with_userid.xlsx に必要な構造を持つファイルを作成することができます。
+なお、quizdata/extract_code_and_save.ipynb を用いると、Moodleの課題に提出された各学習者の提出ファイルからプログラムのコードを抽出して、コード中のコメント文を削除し、extracted_code_with_userid.xlsx に必要な構造を持つファイルを作成することができます。
 
 ### 3. LMSとの連携のための設定
 
