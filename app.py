@@ -54,7 +54,7 @@ config = get_resource_config(resource_link_id)
 
 if not config["examid"]:
     st.info(f"ログインユーザー: {current_user}")
-    st.warning(f"このリンク ({resource_link_id}) には試験IDが割り当てられていません。教師に問い合わせてください。")
+    st.warning(f"このリンク ({resource_link_id}) には試験IDが割り当てられていません。教員に問い合わせてください。")
     st.warning(f"This link ({resource_link_id}) does not have an exam ID assigned. Please contact your teacher.")
 else:
     # メインのクイズ画面を起動
