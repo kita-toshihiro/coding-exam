@@ -31,14 +31,14 @@ For each LMS resource (LTI link to this system), instructors can customize quiz 
 ### Key Features
 
 * **Quiz Settings**:
-* **ExamID Mapping**: Set or change the target Exam ID for each `resource_link_id` (LMS resource unit).
-* **Practice Mode Control**: Toggle "Practice Mode" ON/OFF to determine if learners can see correct answers and detailed explanations immediately after submission.
+  * **ExamID Mapping**: Set or change the target Exam ID for each `resource_link_id` (LMS resource unit).
+  * **Practice Mode Control**: Toggle "Practice Mode" ON/OFF to determine if learners can see correct answers and detailed explanations immediately after submission.
 
 
 * **Grade Management**:
-* **Grade Data Filtering**: Extract and display only the results associated with the currently viewed resource from the total grade data.
-* **Real-time Aggregation**: Automatically calculate and list the highest scores of participating learners.
-* **CSV Download**: Download the grade list in CSV format (UTF-8 with BOM) for importing into external systems like Moodle.
+  * **Grade Data Filtering**: Extract and display only the results associated with the currently viewed resource from the total grade data.
+  * **Real-time Aggregation**: Automatically calculate and list the highest scores of participating learners.
+  * **CSV Download**: Download the grade list in CSV format (UTF-8 with BOM) for importing into external systems like Moodle.
 
 
 
@@ -100,8 +100,8 @@ To ensure secure integration with the LMS, please set the following variables in
 
 * **`LTI_CONSUMER_KEY`**: Must match the "Consumer Key" of the LTI call (External Tool in Moodle) configured on the LMS side. Specify any string.
 * **`ALLOWED_LMS_HOST`**: Specify the domain of the originating LMS.
-* To limit to a specific host (example): `ALLOWED_LMS_HOST = "moodle.your.domain"`
-* To set no restrictions (e.g., during development): `ALLOWED_LMS_HOST = "ALL"`
+  * To limit to a specific host (example): `ALLOWED_LMS_HOST = "moodle.your.domain"`
+  * To set no restrictions (e.g., during development): `ALLOWED_LMS_HOST = "ALL"`
 
 
 * Note: This is a simplified implementation that performs Consumer Key matching only; OAuth signature verification is not implemented.
@@ -115,6 +115,8 @@ Running `main.py` starts both FastAPI (Port 8803) and Streamlit (Port 8802) simu
 python3 main.py
 
 ```
+
+---
 
 ## Security Features
 
@@ -136,7 +138,3 @@ python3 main.py
 | `utils.py` | **Multilingual/UI Management**: Definitions for language resources and anti-copy CSS injection. |
 | `quizdata/xlsx2quizdata.py` | **AI Question Generation**: Uses Gemini to analyze code and create questions. |
 | `quizdata/extract_code_and_save.ipynb` | Extracts program code from Moodle assignment files to create the data file. |
-
----
-
-Would you like me to help you draft the configuration for the `LTI_CONSUMER_KEY` or explain the database schema further?
