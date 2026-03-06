@@ -1,4 +1,4 @@
-# coding-exam : Programming Quiz System (LTI Tool)
+# coding-exam : Personalized Programming Quiz System (LTI Tool)
 
 このプロジェクトは、プログラミング課題の解答として学習者から提出されたソースコードをAIで解析し、学習者ごとにパーソナライズされた理解度チェック **（自分が提出したコードの意味をちゃんと理解しているか）** のクイズを自動生成する学習支援ツールです。
 
